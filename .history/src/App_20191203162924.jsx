@@ -20,13 +20,8 @@ const App = () => {
       onViewportChange={viewport => {
         setViewport(viewport)
       }}
-    >
-      {/* {MapData.features.map(capital => (
-        <Marker key= >
-          <div>Capital</div>
-        </Marker>
-      ))} */}
-    </ReactMapGL>
+      {MapData.features.map(capital => <Marker></Marker>)}
+    ></ReactMapGL>
   )
 }
 
