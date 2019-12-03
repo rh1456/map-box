@@ -11,12 +11,7 @@ const App = () => {
     height: '100vh',
   })
   return (
-    <ReactMapGL
-      {...viewport}
-      mapboxApiAccessToken={
-        'pk.eyJ1IjoicmgxNDU2IiwiYSI6ImNrM3FhZWFnNTBieGMzY3BlY2d4ZzA2Nm4ifQ.9yHbveT97fCPRZj0ZHjx4Q'
-      }
-    />
+    <ReactMapGL mapboxApiAccessToken={pk.eyJ1IjoicmgxNDU2IiwiYSI6ImNrM3FhZWFnNTBieGMzY3BlY2d4ZzA2Nm4ifQ.9yHbveT97fCPRZj0ZHjx4Q} />
   )
 }
 
