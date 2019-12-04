@@ -27,9 +27,7 @@ const App = () => {
           latitude={capital.geometry.coordinates[1]}
           longitude={capital.geometry.coordinates[0]}
         >
-          <div className="marker">
-            <i class="fas fa-flag"></i>
-          </div>
+          <div>City</div>
         </Marker>
       ))}
     </ReactMapGL>

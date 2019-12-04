@@ -22,14 +22,8 @@ const App = () => {
       }}
     >
       {MapData.features.map(capital => (
-        <Marker
-          key={capital.properties.name}
-          latitude={capital.geometry.coordinates[1]}
-          longitude={capital.geometry.coordinates[0]}
-        >
-          <div className="marker">
-            <i class="fas fa-flag"></i>
-          </div>
+        <Marker key={capital.properties.name}>
+          <div>Capital</div>
         </Marker>
       ))}
     </ReactMapGL>
