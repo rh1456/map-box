@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 import MapData from './Data/us_cities.json'
 const App = () => {
   // const MapboxAccessToken = {pk.eyJ1IjoicmgxNDU2IiwiYSI6ImNrM3FhZWFnNTBieGMzY3BlY2d4ZzA2Nm4ifQ.9yHbveT97fCPRZj0ZHjx4Q}
-
-  /*Display St. Pete upon opening page with Long/Lat Coordinates*/
   const [viewport, setViewport] = useState({
     latitude: 27.770973599999998,
     longitude: -82.66341729999999,
@@ -12,7 +10,7 @@ const App = () => {
     width: '100vw',
     height: '100vh',
   })
-  const [city, setCity] = useState()
+  // const [city, selectedCity] = useState()
   return (
     <ReactMapGL
       {...viewport}
@@ -24,31 +22,17 @@ const App = () => {
         setViewport(viewport)
       }}
     >
-      {/* Map over the the array to pull Long/Lat coordinates for each city from JSON data */}
-      {MapData.features.map(city => (
+      {MapData.features.map(capital => (
         <Marker
-          key={city.properties.name}
-          latitude={city.geometry.coordinates[1]}
-          longitude={city.geometry.coordinates[0]}
+          key={capital.properties.name}
+          latitude={capital.geometry.coordinates[1]}
+          longitude={capital.geometry.coordinates[0]}
         >
-          <button
-            className="cityMarker"
-            onclick={e => {
-              e.preventDefault()
-              setCity(city)
-            }}
-          >
+          <button className="marker">
             <i class="fas fa-flag"></i>
           </button>
         </Marker>
       ))}
-
-      {/* Ternary, if city is selected do this function*/}
-      {/* {setCity ? (
-        <Popup>
-          <div>City</div>
-        </Popup>
-      ) : null} */}
     </ReactMapGL>
   )
 }

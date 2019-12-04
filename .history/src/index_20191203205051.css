@@ -10,7 +10,7 @@ body {
   margin: 0;
   min-height: 100%;
 }
-.cityMarker {
+.marker {
   cursor: pointer;
   border: none;
   background: none;

@@ -44,11 +44,11 @@ const App = () => {
       ))}
 
       {/* Ternary, if city is selected do this function*/}
-      {/* {setCity ? (
+      {setCity ? (
         <Popup>
           <div>City</div>
         </Popup>
-      ) : null} */}
+      ) : null}
     </ReactMapGL>
   )
 }
