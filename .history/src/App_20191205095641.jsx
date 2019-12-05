@@ -54,7 +54,7 @@ const App = () => {
             setCity(null)
           }}
         >
-          <h2>{setCity.properties.name}</h2>
+          <div>City</div>
         </Popup>
       ) : null}
     </ReactMapGL>

@@ -47,14 +47,13 @@ const App = () => {
 
       {setCity ? (
         <Popup
-          key={setCity.properties.coordinates}
           latitude={setCity.geometry.coordinates[1]}
           longitude={setCity.geometry.coordinates[0]}
           onClose={() => {
             setCity(null)
           }}
         >
-          <h2>{setCity.properties.name}</h2>
+          <div>City</div>
         </Popup>
       ) : null}
     </ReactMapGL>
